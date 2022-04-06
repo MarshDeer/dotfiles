@@ -1,0 +1,4 @@
+alias ls="ls -Aosh --color=auto"
+alias edit="_open_files_for_editing"
+alias update="yay -Syu --ignore bitwig-studio"
+alias q="exit"
