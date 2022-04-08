@@ -1,2 +1,12 @@
 set nu rnu
+set autoindent
+set incsearch
+set ignorecase
+set hlsearch
+
 syntax on
+
+filetype plugin indent on
+
+colorscheme gruvbox
+source ~/.config/vim/statusline.vim
