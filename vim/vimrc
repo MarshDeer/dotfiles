@@ -3,6 +3,7 @@ set autoindent
 set incsearch
 set ignorecase
 set hlsearch
+set background=dark
 
 syntax on
 
