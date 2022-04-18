@@ -37,13 +37,13 @@ set render-loading-fg           "#ebdbb2" # fg
 set recolor-lightcolor          "#282828" # bg
 set recolor-darkcolor           "#ebdbb2" # fg
 set recolor                     "true"
-set recolor-keephue             false      # keep original color
+set recolor-keephue             "false"      # keep original color
 
 # Color schemes
 map <S-F1> feedkeys ":set recolor-lightcolor \#ebdbb2<Return>"
 map <S-F2> feedkeys ":set recolor-darkcolor \#282828<Return>"
 map <C-i> feedkeys "<S-F1><S-F2>"   # light
 
-map <S-F3> feedkeys ":set recolor-lightcolor \#282828"
-map <S-F4> feedkeys ":set recolor-darkcolor \#ebdbb2"
+map <S-F3> feedkeys ":set recolor-lightcolor \#282828<Return>"
+map <S-F4> feedkeys ":set recolor-darkcolor \#ebdbb2<Return>"
 map <A-i> feedkeys "<S-F3><S-F4>"   # dark
