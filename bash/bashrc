@@ -48,7 +48,7 @@ source ~/.bash_aliases
 #------------------------------------------------------------
 ## Prompt
 
-export PS1="\e[31m\e[0m\e[30;41m\$(hostname | colrm 1 4)\e[0m\e[31m\e[0m\e[96m\e[0m\e[30;106m\w\e[0m\e[96m\e[0m\e[34m\e[0m\e[30;44m\$(git branch 2>/dev/null | grep '^*' | colrm 1 2)\e[0m\[$(tput sgr0)\]\e[34m\e[0m "
+export PS1="\e[35m\e[0m\e[30;45m\$(hostname | colrm 1 4)\e[0m\e[35m\e[0m\e[96m\e[0m\e[30;106m\w\e[0m\e[96m\e[0m\e[34m\e[0m\e[30;44m\$(git branch 2>/dev/null | grep '^*' | colrm 1 2)\e[0m\[$(tput sgr0)\]\e[34m\e[0m "
 
 #------------------------------------------------------------
 ## Check window size
