@@ -10,7 +10,7 @@ alias update="yay -Syu --ignore bitwig-studio"
 
 # Shortcuts
 alias edit="_open_files_for_editing"
-alias q="exit"
+alias :q="exit"
 
 # SSH
 alias lensserver="ssh lena@lensserver"
