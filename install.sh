@@ -14,7 +14,7 @@ GREEN="\033[38;5;10m"
 	sudo -s rm /usr/share/X11/xkb/symbols/us
 	ln ./xkb/us /usr/share/X11/xkb/symbols/
 	echo -e "${GREEN}XKB layout hardlinked succesfully${NO}"
-	echo -e "${RED}Remember to set your XKB layout to US-Dvorak!${NO}
+	echo -e "${RED}Remember to REset your XKB layout to US-Dvorak!${NO}
 	"
 
 # Zathura
@@ -30,8 +30,10 @@ GREEN="\033[38;5;10m"
 # Vim
 	rm /home/lena/.vimrc
 	ln -s ./vim/vimrc /home/lena/.vimrc
-	echo -e "${GREEN}.vimrc softlinked successfully${NO}
+	ln -s .vim/statusline.vim .config/vim/statusline.vim
+	echo -e "${GREEN}.vimrc and status line softlinked successfully${NO}
 	"
+	
 
 # Bash
 	rm /home/lena/.bashrc
