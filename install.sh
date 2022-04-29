@@ -30,7 +30,7 @@ GREEN="\033[38;5;10m"
 # Vim
 	rm /home/lena/.vimrc
 	ln -s ./vim/vimrc /home/lena/.vimrc
-	ln -s .vim/statusline.vim .config/vim/statusline.vim
+	ln -s ./vim/statusline.vim /home/lena/config/vim/statusline.vim
 	echo -e "${GREEN}.vimrc and status line softlinked successfully${NO}
 	"
 	
@@ -43,6 +43,17 @@ GREEN="\033[38;5;10m"
 	source /home/lena/.bashrc
 	echo -e "${GREEN}.bashrc and .bash_aliases softlinked and sourced succesfully${NO}
 	"
+
+# Neofetch
+	if [ -x /usr/bin/neofetch ] ;
+		then
+			rm -rf /home/lena/.config/neofetch
+			ln ./neofetch /home/lena/.config/neofetch
+			echo -e "${GREEN}neofetch dotfiles hardlinked successfully${NO}
+			"
+		else
+			echo -e"${RED}neofetch is not installed in this computer; skipping${NO}"
+	fi
 
 # End
 	echo -e "${GREEN}:)${NO}"
