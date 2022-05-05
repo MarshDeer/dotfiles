@@ -20,8 +20,8 @@ GREEN="\033[38;5;10m"
 # Zathura
 	if [ -x /usr/bin/zathura ] ;
 		then
-			ln /home/lena/git/zathura/zathurarc /home/lena/.config/zathura/zathurarc
-			echo -e "${GREEN}zathurarc hardlinked succesfully${NO}"
+			stow zathura -t /home/lena/
+			echo -e "${GREEN}zathurarc stowed succesfully${NO}"
 		else	
 			echo -e "${RED}zathura is not installed in this computer; skipping${NO}
 			"
@@ -29,8 +29,7 @@ GREEN="\033[38;5;10m"
 
 # Vim
 	rm /home/lena/.vimrc
-	ln -s /home/lena/git/vim/vimrc /home/lena/.vimrc
-	ln -s /home/lena/git/vim/statusline.vim /home/lena/config/vim/statusline.vim
+	stow vim -t /home/lena/
 	echo -e "${GREEN}.vimrc and status line softlinked successfully${NO}
 	"
 	
@@ -38,8 +37,7 @@ GREEN="\033[38;5;10m"
 # Bash
 	rm /home/lena/.bashrc
 	rm /home/lena/.bash_aliases
-	ln -s /home/lena/git/bash/bashrc /home/lena/.bashrc
-	ln -s /home/lena/git/bash/bash_aliases /home/lena/.bash_aliases
+	stow bash -t /home/lena/
 	source /home/lena/.bashrc
 	echo -e "${GREEN}.bashrc and .bash_aliases softlinked and sourced succesfully${NO}
 	"
@@ -48,7 +46,7 @@ GREEN="\033[38;5;10m"
 	if [ -x /usr/bin/neofetch ] ;
 		then
 			rm -rf /home/lena/.config/neofetch
-			ln /home/lena/git/neofetch /home/lena/.config/neofetch
+			stow neofetch -t /home/lena/
 			echo -e "${GREEN}neofetch dotfiles hardlinked successfully${NO}
 			"
 		else
