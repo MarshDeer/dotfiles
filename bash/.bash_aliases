@@ -15,5 +15,6 @@ alias edit="_open_files_for_editing"
 alias :q="exit"
 
 # SSH
-alias lensserver="ssh lena@lensserver"
+alias lensserver="ssh lensserver"
 alias arcade="ssh pi@retropie"
+alias laptop="ssh deerlaptop"
