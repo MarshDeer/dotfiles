@@ -19,3 +19,10 @@ alias :q="exit"
 alias lensserver="ssh lensserver"
 alias arcade="ssh pi@retropie"
 alias laptop="ssh deerlaptop"
+
+# Git
+alias gstat="onefetch && git status"
+alias gadd="git add"
+alias gcom="git commit"
+alias gpush="git push"
+alias gpull="git pull"
