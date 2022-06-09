@@ -8,7 +8,7 @@ alias neofetch="neofetch --ascii_colors 4 5 7 8"
 # Functionality
 alias mv="mv -i"
 alias update="yay -Syu --ignore bitwig-studio"
-alias unfuck_samba="sudo umount /mnt/servext && sudo umount /mnt/servhome && sudo umount /mnt/servvid mount -a"
+alias unfuck_samba="sudo umount /mnt/servext && sudo umount /mnt/servhome && sudo umount /mnt/servvid && mount -a"
 alias spritz="speedread"
 
 # Shortcuts
