@@ -12,7 +12,7 @@ GREEN="\033[38;5;10m"
 
 # XKB
 	sudo -s rm /usr/share/X11/xkb/symbols/us
-	ln /home/lena/git/xkb/us /usr/share/X11/xkb/symbols/
+	ln /home/lena/git/dotfiles/xkb/us /usr/share/X11/xkb/symbols/
 	echo -e "${GREEN}XKB layout hardlinked succesfully${NO}"
 	echo -e "${RED}Remember to REset your XKB layout to US-Dvorak!${NO}
 	"
@@ -50,7 +50,19 @@ GREEN="\033[38;5;10m"
 			echo -e "${GREEN}neofetch dotfiles hardlinked successfully${NO}
 			"
 		else
-			echo -e"${RED}neofetch is not installed in this computer; skipping${NO}"
+			echo -e "${RED}neofetch is not installed in this computer; skipping${NO}
+			"
+	fi
+
+# Warpd
+	if [ -x /usr/bin/warpd ] ;
+		then
+			stow warpd -t /home/lena
+			echo -e "${GREEN}warpd dotfiles softlinked successfully${NO}
+			"
+		else
+			echo -e "${RED}warpd is not installed in this computer; skipping${NO}
+			"
 	fi
 
 # End
