@@ -1,0 +1,14 @@
+hint_activation_key: M-f
+grid_activation_key: M-g
+screen_activation_key: M-c
+hint: f
+
+grid_color: #ebdbb2 
+grid_keys: e u j k
+
+hint_chars: aoeuidhtns
+hint_bgcolor: #282828
+hint_fgcolor: #8ec07c
+hint_size: 25
+
+screen_chars: lh
