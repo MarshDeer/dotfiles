@@ -8,7 +8,6 @@ alias neofetch="neofetch --ascii_colors 4 5 7 8"
 # Functionality
 alias mv="mv -i"
 alias update="yay -Syu --ignore bitwig-studio"
-alias unfuck_samba="sudo mount -a"
 alias spritz="speedread"
 
 # Shortcuts
@@ -19,3 +18,7 @@ alias :q="exit"
 alias lensserver="ssh lensserver"
 alias arcade="ssh pi@retropie"
 alias laptop="ssh deerlaptop"
+
+# Unfucking
+alias unfuck_samba="sudo mount -a && echo -e 'ｕｎｆｕｃｋｅｄ'"
+alias unfuck_bd="betterdiscord -i traditional"
