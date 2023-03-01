@@ -21,4 +21,4 @@ alias laptop="ssh deerlaptop"
 
 # Unfucking
 alias unfuck_samba="sudo mount -a && echo -e 'ｕｎｆｕｃｋｅｄ'"
-alias unfuck_bd="betterdiscord -i traditional"
+alias unfuck_bd="betterdiscordctl install"
