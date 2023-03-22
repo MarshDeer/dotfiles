@@ -7,12 +7,13 @@ alias neofetch="neofetch --ascii_colors 4 5 7 8"
 
 # Functionality
 alias mv="mv -i"
-alias update="yay -Syu --ignore bitwig-studio"
 alias spritz="speedread"
 
 # Shortcuts
 alias edit="_open_files_for_editing"
 alias :q="exit"
+alias update="yay -Syu --ignore bitwig-studio"
+alias nuke="sudo pacman -Rcns"
 
 # SSH
 alias lensserver="ssh lensserver"
