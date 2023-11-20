@@ -16,10 +16,9 @@ alias update="yay -Syu --ignore bitwig-studio"
 alias nuke="sudo pacman -Rcns"
 
 # SSH
-alias lensserver="ssh lensserver"
+alias server="ssh lensserver"
 alias arcade="ssh pi@retropie"
 alias laptop="ssh deerlaptop"
 
 # Unfucking
 alias unfuck_samba="sudo mount -a && echo -e 'ｕｎｆｕｃｋｅｄ'"
-alias unfuck_bd="betterdiscordctl install"

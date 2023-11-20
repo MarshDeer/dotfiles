@@ -10,12 +10,12 @@ hint_chars: aoeuidhtns
 hint_font: Agave Nerd Font Mono
 hint_border_radius: 7
 hint_bgcolor: #282828
-hint_fgcolor: #8ec07c
+hint_fgcolor: #d3869b
 hint_size: 25
 
 screen_chars: lh
 
 normal_system_cursor: 1
-indicator_color: #b8bb26
+indicator_color: #d3869b
 indicator_size: 20
 indicator: topleft
