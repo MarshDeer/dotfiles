@@ -22,3 +22,4 @@ alias laptop="ssh deerlaptop"
 
 # Unfucking
 alias unfuck_samba="sudo mount -a && echo -e 'ｕｎｆｕｃｋｅｄ'"
+alias unfuck_screen="kscreen-doctor output.2.rotation.inverted"
