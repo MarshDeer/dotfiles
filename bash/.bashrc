@@ -64,3 +64,6 @@ HISTFILESIZE=2000
 #------------------------------------------------------------
 ## Automatically cd
 shopt -s autocd
+
+# Created by `pipx` on 2024-01-13 21:29:40
+export PATH="$PATH:/home/lena/.local/bin"
