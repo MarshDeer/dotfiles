@@ -1,0 +1,8 @@
+.contents_f9f2ca {
+	display: grid;
+	grid-template-columns: auto 1fr;
+}
+
+.messageContent_f9f2ca {
+	width: 100%;
+}
