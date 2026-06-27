@@ -1,0 +1,44 @@
+[general]
+	import = [
+		"~/.config/alacritty/gruvbox.toml"
+	]
+	live_config_reload = true
+
+[window]
+	opacity = 0.8
+	padding = {
+		x = 5,
+		y = 5
+	}
+	resize_increments = true
+
+[font]
+	size = 10.0
+	bold = {
+		family = "FantasqueSansM Nerd Font Mono",
+		style = "Bold"
+	}
+	bold_italic = {
+		family = "FantasqueSansM Nerd Font Mono",
+		style = "Bold Italic"
+	}
+	italic = {
+		family = "FantasqueSansM Nerd Font Mono",
+		style = "Italic"
+	}
+	normal = {
+		family = "FantasqueSansM Nerd Font Mono",
+		style = "Regular"
+	}
+
+[cursor]
+	style = {
+		blinking = "On"
+	}
+	unfocused_hollow = true
+
+[mouse]
+	hide_when_typing = true
+
+[hints]
+	alphabet = "aoeuidhtns"
