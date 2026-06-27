@@ -206,7 +206,7 @@ xkb_symbols "dvorak" {
 
     key <TLDE> { [       grave,	asciitilde, dead_grave, dead_tilde	] };
 
-    key <AE01> { [	    1,	exclam 		]	};
+    key <AE01> { [	    1,	exclam,	exclamdown, exclamdown};
     key <AE02> { [	    2,	at		]	};
     key <AE03> { [	    3,	numbersign	]	};
     key <AE04> { [	    4,	dollar		]	};
@@ -229,7 +229,7 @@ xkb_symbols "dvorak" {
     key <AD08> { [	    c,	C		]	};
     key <AD09> { [	    r,	R		]	};
     key <AD10> { [	    l,	L		]	};
-    key <AD11> { [	slash,	question	]	};
+    key <AD11> { [	slash,	question, questiondown, questiondown	]	};
     key <AD12> { [	equal,	plus		]	};
 
     key <AC01> { [	    a,	A, 	aacute,	Aacute	]	};
