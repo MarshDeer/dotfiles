@@ -89,7 +89,7 @@ tag_color = item_color
 tag_selected_color = item_selected_color
 
 # Tag key color
-tag_key_color = (BLACK,BLACK,ON)
+tag_key_color = (WHITE,BLACK,OFF)
 
 # Selected tag key color
 tag_key_selected_color = item_selected_color
