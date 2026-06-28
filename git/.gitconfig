@@ -1,0 +1,9 @@
+[user]
+	name = MarshDeer
+	email = 102762572+MarshDeer@users.noreply.github.com
+[color]
+	ui = true
+[core]
+	editor = vim
+[init]
+	defaultBranch = trunk
