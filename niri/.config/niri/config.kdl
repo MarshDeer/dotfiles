@@ -22,7 +22,6 @@ input {
 	    layout "us"
 	    variant "dvorak"
 	    options "caps:backspace,shift:both_capslock,lv3:ralt_switch"
-	    //file "/home/lena/test.xkb"
         }
 
         // Enable numlock on startup, omitting this setting disables it.
