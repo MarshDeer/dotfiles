@@ -1,69 +1,25 @@
 #!/bin/bash
-NO="\033[0m"
-RED="\033[38;5;196m"
-GREEN="\033[38;5;10m"
+if [ ! command -v dialog ] || [ ! command -v stow ]; then
+	echo "ERROR - Install script requires 'dialog' and 'stow' to be available in \$PATH"
+	exit 2
+fi
 
-## Install dotfiles
+choices=$(dialog --stdout --no-items --keep-window --checklist \
+	"Select the dotfiles to be stowed in $HOME" \
+	25 45 15\
+	$(dir -d -1 */ | sed '/^xkb\/$/d' | tr -d / | awk '{print $1, "off"}')
+)
 
-# Intro
-	clear
-	echo -e "\e[38;5;$((RANDOM%257))mHemlo! I'm gonna automatically clone your dotfiles now!\nBet you feel cool, asshole :P \e[0m
-"
-
-# XKB
-	sudo -s rm /usr/share/X11/xkb/symbols/us
-	ln /home/lena/git/dotfiles/xkb/us /usr/share/X11/xkb/symbols/
-	echo -e "${GREEN}XKB layout hardlinked succesfully${NO}"
-	echo -e "${RED}Remember to REset your XKB layout to US-Dvorak!${NO}
-	"
-
-# Zathura
-	if [ -x /usr/bin/zathura ] ;
-		then
-			stow zathura -t /home/lena/
-			echo -e "${GREEN}zathurarc stowed succesfully${NO}"
-		else	
-			echo -e "${RED}zathura is not installed in this computer; skipping${NO}
-			"
+for package in $choices; do
+	if command -v "$package" >/dev/null 2>&1; then
+		stow $package -t "$HOME"
+	else
+		dialog --title "ERROR" --msgbox "'$package' is not in \$PATH; not installed? Skipping..." 6 45
 	fi
+done
 
-# Vim
-	rm /home/lena/.vimrc
-	stow vim -t /home/lena/
-	echo -e "${GREEN}.vimrc and status line softlinked successfully${NO}
-	"
-	
-
-# Bash
-	rm /home/lena/.bashrc
-	rm /home/lena/.bash_aliases
-	stow bash -t /home/lena/
-	source /home/lena/.bashrc
-	echo -e "${GREEN}.bashrc and .bash_aliases softlinked and sourced succesfully${NO}
-	"
-
-# Neofetch
-	if [ -x /usr/bin/neofetch ] ;
-		then
-			rm -rf /home/lena/.config/neofetch
-			stow neofetch -t /home/lena/
-			echo -e "${GREEN}neofetch dotfiles hardlinked successfully${NO}
-			"
-		else
-			echo -e "${RED}neofetch is not installed in this computer; skipping${NO}
-			"
-	fi
-
-# Warpd
-	if [ -x /usr/bin/warpd ] ;
-		then
-			stow warpd -t /home/lena
-			echo -e "${GREEN}warpd dotfiles softlinked successfully${NO}
-			"
-		else
-			echo -e "${RED}warpd is not installed in this computer; skipping${NO}
-			"
-	fi
-
-# End
-	echo -e "${GREEN}:)${NO}"
+if dialog --yesno "Do you want to add Spanish characters to the us(dvorak) keyboard layout?" 6 50; then
+	sudo cp /usr/share/X11/xkb/symbols/us /usr/share/X11/xkb/symbols/us.bak
+	sudo ln -sf xkb/us /usr/share/X11/xkb/symbols/us
+	dialog --msgbox "Done! Old xkb symbols definition backed up in /usr/share/X11/xkb/symbols/us.bak" 6 50
+fi
