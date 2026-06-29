@@ -23,6 +23,11 @@ input {
     focus-follows-mouse max-scroll-amount="75%"
 }
 
+// https://niri-wm.github.io/niri/Configuration:-Switch-Events
+switch-events {
+    lid-close { spawn "systemctl suspend"; }
+}
+
 // https://niri-wm.github.io/niri/Configuration:-Layout
 layout {
     gaps 10
