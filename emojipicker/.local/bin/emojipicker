@@ -1,0 +1,4 @@
+#!/bin/bash
+
+emoji=$(cat < $HOME/.local/share/emojilist | fuzzel --dmenu --mesg-mode=expand --match-mode=fzf | cut -d ' ' -f 1)
+wl-copy $emoji && notify-send "Copied $emoji" -t 1000
