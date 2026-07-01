@@ -1,0 +1,26 @@
+ignore-empty-password
+color=282828
+bs-hl-color=FB4934
+caps-lock-key-hl-color=D65D0E
+caps-lock-bs-hl-color=CC241D
+font=FantasqueSansM Nerd Font Mono
+indicator-radius=150
+indicator-thickness=50
+inside-color=282828
+inside-clear-color=83A598
+inside-caps-lock-color=FE8019
+inside-ver-color=8EC07C
+inside-wrong-color=FB4934
+key-hl-color=D3869B
+line-uses-inside
+ring-color=282828
+ring-clear-color=282828
+ring-caps-lock-color=282828
+ring-ver-color=282828
+ring-wrong-color=282828
+separator-color=1D2021
+text-color=1D2021
+text-clear-color=1D2021
+text-caps-lock-color=1D2021
+text-ver-color=1D2021
+text-wrong-color=1D2021
