@@ -3,10 +3,8 @@
 	"position": "top",
 
 	"modules-left": [
-		"sway/mode",
-		"sway/workspaces",
-		"custom/arrow10",
-		"sway/window"
+		"niri/workspaces",
+		"custom/arrow10"
 	],
 
 	"modules-right": [
@@ -23,7 +21,6 @@
 		"custom/arrow4",
 		"battery",
 		"custom/arrow3",
-		"sway/language",
 		"custom/arrow2",
 		"tray",
 		"clock#date",
@@ -65,7 +62,6 @@
 		"interval": 20,
 		"format": "{:%e %b %Y}",
 		"tooltip": false
-		//"tooltip-format": "{:%e %B %Y}"
 	},
 
 	"cpu": {
@@ -79,10 +75,9 @@
 		}
 	},
 
-	"sway/language": {
+	"niri/language": {
 		"format": " {}",
-		"min-length": 5,
-		"on-click": "swaymsg 'input * xkb_switch_layout next'",
+		"format-en": "EN",
 		"tooltip": false
 	},
 
@@ -105,22 +100,15 @@
 		"tooltip": false
 	},
 
-	"sway/mode": {
-		"format": "{}",
-		"tooltip": false
-	},
-
-	"sway/window": {
+	"niri/window": {
 		"format": "{}",
 		"max-length": 30,
-		"tooltip": false
+		"tooltip": false,
+		"separate-outputs": true
 	},
 
-	"sway/workspaces": {
-		"disable-scroll-wraparound": true,
-		"smooth-scrolling-threshold": 4,
-		"enable-bar-scroll": true,
-		"format": "{name}"
+	"niri/workspaces": {
+		"format": "{value}"
 	},
 
 	"pulseaudio": {
