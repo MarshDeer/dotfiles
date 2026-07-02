@@ -4,7 +4,8 @@ if [ $1 == "--update" ]; then
 	curl -f "https://www.unicode.org/Public/17.0.0/emoji/emoji-test.txt" |
 	grep "; fully-qualified" |
 	cut -c 79- |
-	sed -E "s/ E[0-9]{1,2}\.[0-9] //" > "$(pwd)/emojipicker/.local/share/emojilist"
+	cut -c 2- |
+	sed -E "s/ E[0-9]{1,2}\.[0-9]//" > "$HOME/.local/share/emojilist"
 	exit 1
 fi
 
