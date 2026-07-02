@@ -59,7 +59,7 @@ choices=$(dialog --stdout --no-items --keep-window --checklist \
 )
 
 for image in $choices; do
-	ln -s $image $HOME/.config/$image
+	cp $image $HOME/.config/
 done
 
 #-------------------------------------------------------------------------------
