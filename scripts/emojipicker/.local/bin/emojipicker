@@ -1,4 +1,12 @@
 #!/bin/bash
 
+if [ $1 == "--update" ]; then
+	curl -f "https://www.unicode.org/Public/17.0.0/emoji/emoji-test.txt" |
+	grep "; fully-qualified" |
+	cut -c 79- |
+	sed -E "s/ E[0-9]{1,2}\.[0-9] //" > "$(pwd)/emojipicker/.local/share/emojilist"
+	exit 1
+fi
+
 emoji=$(cat < $HOME/.local/share/emojilist | fuzzel --dmenu --mesg-mode=expand --match-mode=fzf | cut -d ' ' -f 1)
 wl-copy $emoji && notify-send "Copied $emoji" -t 1000
