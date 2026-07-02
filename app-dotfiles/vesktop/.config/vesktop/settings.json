@@ -1,6 +1,6 @@
 {
     "discordBranch": "stable",
-    "minimizeToTray": true,
+    "minimizeToTray": false,
     "arRPC": false,
     "splashColor": "oklch(0.894143 0.056606 89.1989)",
     "splashBackground": "oklch(0.276846 0.0000137781 none)",
